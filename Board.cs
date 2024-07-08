@@ -14,6 +14,7 @@ namespace TicTacToe
 
         public Square[,] StartBoard = new Square[RowMax, ColMax];
 
+        // Create board with 3 rows and 3 columns of squares
        public Board()
         {
             for (int i = 0; i < RowMax; i++)

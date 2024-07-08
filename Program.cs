@@ -11,7 +11,6 @@ namespace TicTacToe
         static void Main(string[] args)
         {
             InputManager inputManager = new InputManager();
-
             inputManager.InitializeGame();
         }
     }

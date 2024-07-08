@@ -11,16 +11,20 @@ namespace TicTacToe
         public int Row { get; set; }
         public int Col { get; set; }
         public Player player;
+
+        // Squares can hold which player has checked them.
+        // Can move funtionality to a player class instead to hold which column/row has been checked. 
+
+        public Square(int row, int col)
+        {
+            Row = row;
+            Col = col;
+        }
         public bool SquarePlayed()
         {
             if (player == Player._)
                 return false;
             return true;
-        }
-        public Square(int row, int col)
-        {
-            Row = row;
-            Col = col;
         }
         public void SquareChosen(Player play)
         {

@@ -26,6 +26,8 @@ namespace TicTacToe
         {
             Turn = 1;
         }
+
+        // Initialize Game and perform all required checks. While statement to loop through game.
         public void InitializeGame()
         {
             do
@@ -66,7 +68,8 @@ namespace TicTacToe
             return _player;
         }
 
-
+        // Method call to check if a player has won using the methods for each.
+        // Could optimize this more by storing each multidimensional array into a variable and checking the variable
         private Square.Player PlayerWon()
         {
 
@@ -88,7 +91,7 @@ namespace TicTacToe
 
             return _player;
         }
-
+        // Methods to perform checks to see if player has won
         private Square.Player CheckDiagnols()
         {
             int counterX = 0;
@@ -162,6 +165,7 @@ namespace TicTacToe
             return _player;
         }
 
+        // Asks player for input, checks if its a legal move
         private void AskPlayerInput()
         {
             bool validEntry = false;
@@ -177,6 +181,9 @@ namespace TicTacToe
                     validEntry = int.TryParse(readResult, out input);
                     if (validEntry)
                     {
+                        // The if statements for the board.Startboard[index] could probably be stored in a variable.
+                        // Could create a variable that stores each index into a value so its easier to call
+
                         switch (input)
                         {
                             case 1:
